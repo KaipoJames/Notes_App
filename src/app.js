@@ -3,8 +3,6 @@ const input = document.querySelector("#input");
 const notes = document.querySelector(".notes");
 const localStorageContent = localStorage.getItem("names");
 
-let data;
-
 const app = {
   init() {
     this.addEventListeners();
@@ -41,6 +39,7 @@ const app = {
   },
 };
 
+let data;
 if (localStorageContent == null) {
   data = [];
 } else {
@@ -50,8 +49,8 @@ if (localStorageContent == null) {
 
   // Convert data back to HTML elements and add them back to the notes element.
   for (let i = 0; i < data.length; i++) {
-    const el = app.createElement("p", data[i]);
-    notes.appendChild(el);
+    const htmlElement = app.createElement("p", data[i]);
+    notes.appendChild(htmlElement);
   }
 }
 
