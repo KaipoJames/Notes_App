@@ -55,20 +55,4 @@ if (localStorageContent == null) {
   }
 }
 
-/* if (notes.childElementCount == 0) {
-  data = [];
-} */
-
-/* if (storedString) {
-  const noteString = app.createElement("p", storedString);
-  console.log(noteString);
-  notes.appendChild(noteString);
-} */
-
-/* for (var i = 0; i < notes.childElementCount; i++) {
-  const retrievedNote = localStorage.getItem(notes[i]);
-  const parsedNote = JSON.parse(retrievedNote);
-  notes.appendChild(parsedNote);
-} */
-
 app.init();
