@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.create {
+  width: 3rem;
+  height: 2rem;
+  background: rgb(69, 170, 115);
+}

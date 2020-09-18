@@ -1,4 +1,5 @@
 const createBtn = document.querySelector(".create");
+const input = document.querySelector("#input");
 const notes = document.querySelector(".notes");
 
 const app = {
@@ -12,7 +13,8 @@ const app = {
     return newElement;
   },
   getInputValue() {
-    const value = notes.value;
+    const value = input.value;
+    console.log("input Value: " + value);
     return value;
   },
   addNoteToNotes() {
@@ -23,6 +25,7 @@ const app = {
   addEventListeners() {
     if (createBtn) {
       createBtn.addEventListener("click", () => {
+        console.log("clicked!");
         this.addNoteToNotes();
       });
     }
