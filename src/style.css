@@ -1,16 +1,58 @@
+/* <--- GLOBAL STYLES ---> */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* <--- HEADER STYLES ---> */
+header {
+  width: 70%;
+  height: auto;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <--- MAIN STYLES ---> */
+.container {
+  min-height: 90vh;
+  min-width: 80%;
+  background: skyblue;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.actions {
+  min-width: 40vw;
+  min-height: 90vh;
+  background: purple;
+  padding: 2rem;
+}
 .btn {
   width: 6rem;
   height: 2rem;
   background: rgb(69, 170, 115);
 }
-
 #input {
   width: 10rem;
   height: 2rem;
 }
+
+.display {
+  min-width: 40vw;
+  min-height: 90vh;
+  background: yellowgreen;
+  padding: 2rem;
+}
+
+/* <--- FOOTER STYLES ---> */
