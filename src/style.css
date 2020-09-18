@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
-.create {
-  width: 3rem;
+.btn {
+  width: 6rem;
   height: 2rem;
   background: rgb(69, 170, 115);
+}
+
+#input {
+  width: 10rem;
+  height: 2rem;
 }
