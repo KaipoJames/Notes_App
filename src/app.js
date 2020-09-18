@@ -3,7 +3,7 @@ const notes = document.querySelector(".notes");
 
 const app = {
   init() {
-    this.addNoteToNotes();
+    this.addEventListeners();
   },
 
   createElement(element, content) {
@@ -23,8 +23,10 @@ const app = {
   addEventListeners() {
     if (createBtn) {
       createBtn.addEventListener("click", () => {
-        app.init();
+        this.addNoteToNotes();
       });
     }
   },
 };
+
+app.init();
