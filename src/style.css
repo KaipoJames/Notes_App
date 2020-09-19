@@ -11,6 +11,7 @@ body {
   justify-content: center;
   padding-top: 2rem;
   font-family: "Poppins", sans-serif;
+  background: rgb(175, 175, 175);
 }
 
 /* <--- HEADER STYLES ---> */
@@ -37,27 +38,41 @@ main {
 .container {
   min-height: 90vh;
   min-width: 100%;
-  border: 1px solid black;
+  background: rgb(77, 77, 124);
   margin: 3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
 }
+.container-header {
+  font-size: 2.2rem;
+}
 .container-child {
-  margin: 2rem 1rem;
+  border: 1px solid black;
+  width: 50%;
+  height: 100%;
 }
 .actions {
   min-width: 40vw;
   min-height: 90vh;
-  background: purple;
   padding: 2rem;
 }
 .btn {
-  width: 6rem;
+  width: 7rem;
   height: 2rem;
   background: rgb(69, 170, 115);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
 }
+.btn:hover {
+  cursor: pointer;
+  background: rgb(54, 143, 92);
+  border-radius: 10px;
+}
+
 #input {
   width: 10rem;
   height: 2rem;
@@ -66,7 +81,6 @@ main {
 .display {
   min-width: 40vw;
   min-height: 90vh;
-  background: yellowgreen;
   padding: 2rem;
 }
 
