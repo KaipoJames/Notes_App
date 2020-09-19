@@ -9,28 +9,43 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 /* <--- HEADER STYLES ---> */
 header {
-  width: 70%;
-  height: auto;
-  background: red;
+  width: 37%;
+  height: 11vh;
+  background: rgb(79, 194, 202);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* <--- MAIN STYLES ---> */
+main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* <--- MAIN STYLES ---> */
 .container {
   min-height: 90vh;
-  min-width: 80%;
-  background: skyblue;
-  padding: 3rem;
+  min-width: 100%;
+  border: 1px solid black;
+  margin: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
+}
+.container-child {
+  margin: 2rem 1rem;
 }
 .actions {
   min-width: 40vw;

@@ -36,6 +36,14 @@ const app = {
         console.log(notes.childElementCount);
       });
     }
+    if (input) {
+      input.addEventListener("keyup", (event) => {
+        if (event.keyCode == 13) {
+          this.addNoteToNotes();
+          console.log(notes.childElementCount);
+        }
+      });
+    }
   },
 };
 

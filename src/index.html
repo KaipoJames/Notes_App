@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes-App</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -13,7 +17,8 @@
 
     <main>
       <section class="container">
-        <div class="actions">
+        <div class="actions container-child">
+          <h4>My Options</h4>
           <div class="btn create">Create Note</div>
           <input id="input" type="text" placeholder="Create A New Note..." />
           <h3>More Options:</h3>
@@ -21,7 +26,8 @@
           <div class="btn update">Edit</div>
           <div class="btn delete">Delete</div>
         </div>
-        <div class="display">
+        <div class="display container-child">
+          <h4>My Notes</h4>
           <div class="highlighted-note"></div>
 
           <div class="notes"></div>
