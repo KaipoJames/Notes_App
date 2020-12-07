@@ -1,4 +1,5 @@
 const createBtn = document.querySelector(".create");
+const deleteBtn = document.querySelector(".delete");
 const input = document.querySelector("#input");
 const notes = document.querySelector(".notes");
 const localStorageContent = localStorage.getItem("names");
@@ -15,7 +16,6 @@ const app = {
   },
   getInputValue() {
     const value = input.value;
-    //console.log("input Value: " + value);
     return value;
   },
   addNoteToNotes() {
@@ -33,7 +33,7 @@ const app = {
       createBtn.addEventListener("click", () => {
         //console.log("clicked!");
         this.addNoteToNotes();
-        console.log(notes.childElementCount);
+        //console.log(notes.childElementCount);
       });
     }
     if (input) {
@@ -43,6 +43,19 @@ const app = {
           console.log(notes.childElementCount);
         }
       });
+    }
+    if (deleteBtn) {
+      deleteBtn.addEventListener("click", () => {
+        this.extractData();
+      });
+    }
+  },
+  extractData(index) {
+    console.log(data);
+    for (var el of data) {
+      console.log("el: " + el);
+      if (el == index) {
+      }
     }
   },
 };
