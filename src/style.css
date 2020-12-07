@@ -84,4 +84,20 @@ main {
   padding: 2rem;
 }
 
+.note {
+  width: 35vw;
+  height: 7vh;
+  border: 2px solid black;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 0.2rem;
+}
+
 /* <--- FOOTER STYLES ---> */

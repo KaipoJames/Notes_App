@@ -4,11 +4,13 @@ const input = document.querySelector("#input");
 const notes = document.querySelector(".notes");
 const localStorageContent = localStorage.getItem("names");
 
+const icons = [];
+
 const app = {
+
   init() {
     this.addEventListeners();
   },
-
   createElement(element, content) {
     const newElement = document.createElement(element);
     newElement.innerHTML = content;
@@ -18,13 +20,37 @@ const app = {
     const value = input.value;
     return value;
   },
+  addIcons(note) {
+    const pencil_image = document.createElement("img");
+    const plus_image = document.createElement("img");
+    const trash_image = document.createElement("img");
+    pencil_image.src = "../icons/pencil-sign.png";
+    plus_image.src = "../icons/plus-sign.png";
+    trash_image.src = "../icons/trash-can-sign.png";
+    pencil_image.classList.add("icon");
+    plus_image.classList.add("icon");
+    trash_image.classList.add("icon");
+    note.appendChild(pencil_image);
+    note.appendChild(plus_image);
+    note.appendChild(trash_image);
+  },
+  createNewNote(inputValue) {
+    const note = document.createElement("div");
+    const noteText = this.createElement("p", inputValue);
+    note.appendChild(noteText);
+    note.classList.add("note");
+    return note;
+  },
+
   addNoteToNotes() {
-    const value = this.getInputValue();
-    const newNote = this.createElement("p", value);
-    notes.appendChild(newNote);
+    const inputValue = this.getInputValue();
+    const note = this.createNewNote(inputValue);
+    this.addIcons(note);
+
+    notes.appendChild(note);
 
     //Store Note in data array
-    data.push(newNote.innerHTML);
+    data.push(note.children[0].innerHTML);
     console.log(data);
     localStorage.setItem("names", JSON.stringify(data));
   },
@@ -70,8 +96,9 @@ if (localStorageContent == null) {
 
   // Convert data back to HTML elements and add them back to the notes element.
   for (let i = 0; i < data.length; i++) {
-    const htmlElement = app.createElement("p", data[i]);
-    notes.appendChild(htmlElement);
+    const note = app.createNewNote(data[i]);
+    app.addIcons(note);
+    notes.appendChild(note);
   }
 }
 
